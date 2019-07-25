@@ -1,21 +1,19 @@
 ﻿from selenium import webdriver
 import time
 
-link = "http://suninjuly.github.io/registration1.html﻿"
+link = "http://suninjuly.github.io/registration1.html"
 browser = webdriver.Chrome()
 browser.get(link)
 
-# Ваш код, который заполняет обязательные поля
-#input1 = browser.find_element_by_class_name("form-control.first")
-#input1.send_keys("Natalia")
-#input2 = browser.find_element_by_class_name("form-control.second")
-#input2.send_keys("Telelichko")
-#input3 = browser.find_element_by_class_name("form-control.third")
-#input3.send_keys("tel@y.ru")
+# Заполняем поля формы
+input1 = browser.find_element_by_css_selector(".first_block>.first_class .form-control")
+input1.send_keys("N")
 
-required_elements = browser.find_elements_by_css_selector('input[required]')
-for element in required_elements:
-    element.send_keys('required')
+input2 = browser.find_element_by_css_selector(".first_block>.second_class .form-control") 
+input2.send_keys("T")
+
+input3 = browser.find_element_by_css_selector(".first_block>.third_class .form-control")
+input3.send_keys("t@y.ru")
 
 # Отправляем заполненную форму
 button = browser.find_element_by_css_selector("button.btn")
