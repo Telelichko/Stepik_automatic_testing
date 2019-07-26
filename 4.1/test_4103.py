@@ -1,6 +1,4 @@
-﻿import pytest
-
-@pytest.mark.regression
+﻿@pytest.mark.regression
 # тест вне класса: отступа нет
 def test_student_can_see_lesson_name_in_lesson_in_course_after_joining(self, driver):
     # все строки внутри теста с отступом
