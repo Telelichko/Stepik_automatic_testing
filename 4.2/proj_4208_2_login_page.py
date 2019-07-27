@@ -1,5 +1,5 @@
-from proj_4207_base_page import BasePage            # Импорт базового класса BasePage
-from proj_4207_locators import LoginPageLocators
+from proj_4208_2_base_page import BasePage            # Импорт базового класса BasePage
+from proj_4208_2_locators import LoginPageLocators
 
 class LoginPage(BasePage):
     def should_be_login_page(self):
@@ -8,7 +8,7 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        assert str(self.browser.current_url) == "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
+        assert str(self.browser.current_url) == "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
         #assert self.is_element_present(*LoginPageLocators.LOGIN_URL), "Login url is not presented"
 
     def should_be_login_form(self):
